@@ -1,0 +1,51 @@
+{
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "name": "@blockstrait/mapi-client",
+  "author": "Pol Moreno Yeste",
+  "main": "dist/index.js",
+  "types": "dist/index.d.js",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "bsv",
+    "bitcoin sv",
+    "mapi"
+  ],
+  "scripts": {
+    "build": "npm run build:ts",
+    "build:ts": "tsc -b .",
+    "prebuild": "npm run clean",
+    "test": "jest",
+    "clean": "rimraf -rf dist coverage docs *.tsbuildinfo",
+    "test:watch": "jest --watch",
+    "coverage": "jest --coverage",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "pretty:check": "prettier --list-different \"**/*.{js,json,md,ts}\"",
+    "pretty:fix": "prettier --write \"**/*.{js,json,md,ts}\"",
+    "precommit": "eslint-staged",
+    "docs": "typedoc --out ./docs ./src/index.ts --excludeInternal"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "bsv": "^1.5.6"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.8.0",
+    "@typescript-eslint/parser": "^5.8.0",
+    "eslint": "^8.5.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jest": "^25.3.0",
+    "jest": "^27.4.5",
+    "jest-mock-random": "^1.1.1",
+    "lint-staged": "^12.1.4",
+    "prettier": "^2.5.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^27.1.2",
+    "typedoc": "^0.22.10",
+    "typescript": "^4.5.4"
+  }
+}
