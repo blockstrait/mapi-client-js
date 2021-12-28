@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "Apache-2.0",
   "name": "@blockstrait/mapi-client",
   "author": "Pol Moreno Yeste",
@@ -13,6 +13,10 @@
     "bitcoin sv",
     "mapi"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blockstrait/mapi-client-js.git"
+  },
   "scripts": {
     "build": "npm run build:ts",
     "build:ts": "tsc -b .",
