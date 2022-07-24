@@ -98,7 +98,7 @@ export async function sendPostRequest(
   };
 
   if (bearerToken) {
-    headers['Authorization'] = `Bearer ${bearerToken}`;
+    headers.Authorization = `Bearer ${bearerToken}`;
   }
 
   let response: any;
